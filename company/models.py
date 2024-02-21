@@ -6,7 +6,7 @@ class Employee(models.Model):
     salary=models.IntegerField()
     title=models.CharField(max_length=50)
     team=models.ForeignKey("Team" ,on_delete=models.CASCADE,null=True,blank=True)
-    
+
     def __str__(self):
         return self.name
     
