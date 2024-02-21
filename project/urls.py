@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from company.views import EmpolyeeView , EmpolyeeView2
+from company.views import EmpolyeeView , EmpolyeeView2 ,EmployeeClassView ,TeamView ,TeamView2 ,TeamClassView
 
 
 
@@ -25,5 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",EmpolyeeView ,name="EmpolyeeView"),
     path("emp/",EmpolyeeView2 ,name="EmpolyeeView2"),
+    path("EmployeeClassView/",EmployeeClassView.as_view() ,name="EmployeeClassView"),
+    path("TeamView/",TeamView ,name="TeamView"),
+    path("TeamView2/",TeamView2 ,name="TeamView2"),
+    path("TeamClassView/",TeamClassView.as_view() ,name="TeamClassView"),
+
+
 
 ]
